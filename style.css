@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+}
+
+#blog-side{
+    background-color: #c2c9d6;
+}
+
+#render-side{
+    background-color: #ecb159;
+}
