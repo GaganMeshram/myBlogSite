@@ -1,23 +1,48 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Courier New', Courier, monospace;
+body {
+  font-family: "Courier New", Courier, monospace;
 }
 
-main{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 100vh;
+main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
 }
 
-#blog-side{
-    background-color: #c2c9d6;
+#blog-side {
+  background-color: #c2c9d6;
+  padding-left: 3%;
 }
 
-#render-side{
-    background-color: #ecb159;
+#render-side {
+  background-color: #ecb159;
+}
+
+.blog {
+  margin: 10px 5px;
+  padding: 5px;
+  background-color: #ffc0fa;
+  gap: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.blog button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+  padding: 5px;
+  border-radius: 5;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  -ms-border-radius: 5;
+  -o-border-radius: 5;
 }
