@@ -1,3 +1,5 @@
+let blogEl = document.querySelector(".blog-container");
+
 let blogs = [
   {
     id: 1,
@@ -91,11 +93,20 @@ let blogs = [
   },
 ];
 
-function renderBlogs() {
-  console.log(blogs);
-  let blogEl = document.querySelector(".blog-container");
+let postData = JSON.parse(localStorage.getItem("postData")) || blogs;
 
-  // blogs.map(blog => console.log(blog.title))
+// if (postData) {
+//   console.log(postData);
+// } else if (blogs) {
+//   console.log(blogs);
+// } else {
+//   console.log("no data");
+// }
+
+// postData.map(blog=>console.log(blog))
+
+// console.log('from handle form, postData: ', postData)
+function defaultBlogs() {
   blogs.map((blog) => {
     let blogDiv = document.createElement("div");
     blogDiv.className = "blog";
@@ -113,6 +124,38 @@ function renderBlogs() {
 
     blogEl.appendChild(blogDiv);
   });
+}
+
+function postBlogs(){
+  postData.map(post=>{
+    let blogDiv = document.createElement("div");
+    blogDiv.className = "blog";
+    let title = document.createElement("h3");
+    let para = document.createElement("p");
+    let readMore = document.createElement("button");
+
+    title.textContent = post.title
+    para.textContent = post.desc
+    readMore.textContent = "Read blog"
+    blogDiv.appendChild(title);
+    blogDiv.appendChild(para);
+    blogDiv.appendChild(readMore);
+    blogEl.appendChild(blogDiv);
+
+  })
+}
+
+function renderBlogs() {
+
+  if (postData) {
+    postBlogs()
+  } else if (blogs) {
+    defaultBlogs()
+  } else {
+    console.log("no data");
+  }
+
+
 }
 
 renderBlogs();

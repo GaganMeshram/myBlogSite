@@ -10,10 +10,10 @@
     <main>
       <div id="blog-side" class="box">
         <h1>Welcome to Lets Blog</h1>
-        <form action="/submit_form" method="POST">
+        <form id="myForm"">
           <!-- Title -->
           <label for="title">Title:</label><br />
-          <input type="text" id="title" name="title" required /><br /><br />
+          <input type="text" id="title" name="title" value="" required /><br /><br />
 
           <!-- short description -->
           <label for="short-description">Short description:</label><br />
@@ -21,48 +21,34 @@
             type="text"
             id="short-description"
             name="short-description"
+            value=""
             required
           /><br /><br />
 
           <!-- Description -->
           <label for="description">Description:</label><br />
-          <textarea id="message" name="message" rows="4" cols="50"></textarea
+          <textarea id="description" name="message"  rows="4" cols="50"></textarea
           ><br /><br />
 
           <!-- Submit Button -->
-          <input type="submit" value="Submit" />
+          <button type="button" id="postButton">Submit</button>
         </form>
       </div>
 
       <div id="render-side" class="box">
         <h1>All blogs list here</h1>
 
-        <!-- blog 1 -->
+        <!-- blog container -->
 
-        <div class="blog-container" id=""></div>
-        <div class="blog">
-          <h3>Title</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
-            harum praesentium repudiandae tempora laborum ducimus aut ullam,
-            eveniet asperiores, error consequuntur! Dolor vero suscipit ex!
-            Assumenda nobis adipisci dolorem ab?
-          </p>
-          <button>Read blog</button>
+        <div class="blog-container" id="">
+          <!-- dynamic content from blogs.js will go here. -->
         </div>
-        <!-- blog 2 -->
-        <div class="blog">
-            <h3>Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
-              harum praesentium repudiandae tempora laborum ducimus aut ullam,
-              eveniet asperiores, error consequuntur! Dolor vero suscipit ex!
-              Assumenda nobis adipisci dolorem ab?
-            </p>
-            <button>Read blog</button>
-          </div>
       </div>
     </main>
-    <script src="blogs.js"></script>
+    <script type='module' src="blogs.js"></script>
+    <script type="module" src="handleForm.js"></script>
+    <script type="module" src="ex.js"></script>
+
+
   </body>
 </html>
